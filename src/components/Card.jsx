@@ -1,7 +1,7 @@
-export default function Card() {
+export default function Card({nome}) {
     return (
         <div>
-            <h3>Beyonce</h3>
+            <h3>{nome}</h3>
             <img
             src="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
             alt="avatar_img"

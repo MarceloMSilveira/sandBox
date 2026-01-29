@@ -2,7 +2,17 @@ import './App.css'
 import Card from './components/Card'
 
 function App() {
-  
+  const dadosDosContatos = [
+    {
+      nome: ,
+      img: {
+        src: , 
+        alt:
+      }, 
+      celular: ,
+      email: 
+    }
+  ]
 
   return (
     <>
@@ -10,7 +20,7 @@ function App() {
       <div>
         <h2>My Contacts</h2>
 
-        <Card />
+        <Card nome='Falcão'/>
 
         <h3>Jack Bauer</h3>
         <img
