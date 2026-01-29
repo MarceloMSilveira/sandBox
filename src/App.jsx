@@ -1,5 +1,6 @@
 import './App.css'
 import Card from './components/Card'
+import Image from './components/Image';
 
 function App() {
   const dadosDosContatos = [
@@ -32,11 +33,16 @@ function App() {
   }
 ];
 
+  const leaderImgSrc = '../public/eu.jpg';
+  const leaderImgAlt = 'Proj Leader Img'
+
   return (
     <>
       <h1>Props Study App</h1>
       <div>
         <h2>My Contacts:</h2>
+        <Image src={leaderImgSrc} alt={leaderImgAlt} />
+        
         {
           dadosDosContatos.map(
             contato=>{
