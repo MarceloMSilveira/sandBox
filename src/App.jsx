@@ -45,8 +45,9 @@ function App() {
         
         {
           dadosDosContatos.map(
-            contato=>{
+            (contato, index)=>{
               const card = <Card
+                key={index}
                 nome = {contato.nome}
                 imgSrc = {contato.img.src}
                 imgAlt = {contato.img.alt}
