@@ -1,6 +1,12 @@
+import Term from "./Term"
+
+const descricao = `“You can do that!” or “I feel strong!” Arm with tense biceps. Also
+          used in connection with doing sports, e.g. at the gym.`
+
 export default function Dictionary() {
   return (
     <dl className="dictionary">
+      <Term icone='💪' nomeIcone="Tense Biceps" titulo='Tense Biceps' descricao={descricao}/>
       <div className="term">
         <dt>
           <span className="emoji" role="img" aria-label="Tense Biceps">
