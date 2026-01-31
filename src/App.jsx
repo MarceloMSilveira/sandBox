@@ -1,12 +1,28 @@
-import './App.css'
+import { useState } from "react"
 
 function App() {
   
+  let [counter, setCounter] = useState(0)
 
   return (
     <>
-      <h1>Basic React App</h1>
-      <p>Este é um App básico para iniciar projetos com React!</p>
+      <div className="container">
+        <h1>{counter}</h1>
+        <button 
+          onClick={()=> {
+            console.log(counter)
+            const newValue = counter + 1;
+            setCounter(newValue)
+          }}>
+          +
+        </button>
+        <button onClick={ () => {
+          const newValue = counter - 1;
+          setCounter (newValue);
+          } }>
+          -
+        </button>
+      </div>
     </>
   )
 }
