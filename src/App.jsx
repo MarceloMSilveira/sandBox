@@ -5,8 +5,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Hello</h1>
-      {!isLogged && <Login />}
+      { isLogged ? <h1>Hello, wellcome!!!</h1> : <Login />} 
     </div>
   )
 }

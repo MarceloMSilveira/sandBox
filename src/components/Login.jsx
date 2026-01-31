@@ -2,10 +2,13 @@ import Input from "./Input"
 
 export default function Login() {
   return (
-    <form className="form">
-      <Input type="text" placeholder="Username"/>
-      <Input type="password" placeholder="Password" />
-      <button type="submit">Login</button>
-    </form>
+    <div>
+      <h1>Faça o Login:</h1>
+      <form className="form">
+        <Input type="text" placeholder="Username"/>
+        <Input type="password" placeholder="Password" />
+        <button type="submit">Login</button>
+      </form>
+    </div>
   )
 }
