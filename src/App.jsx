@@ -1,11 +1,12 @@
 import Login from './components/Login'
+import Register from './components/Register';
 
 function App() {
-  const isLogged = true;
+  const userIsRegister = false;
 
   return (
     <div className="container">
-      { isLogged ? <h1>Hello, wellcome!!!</h1> : <Login />} 
+      { userIsRegister ? <Login /> : <Register />} 
     </div>
   )
 }
