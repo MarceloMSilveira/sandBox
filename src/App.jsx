@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className="container">
-        <h1>{counter}</h1>
+        <h1>SET TIME EXERCISE</h1>
         <button 
           onClick={()=> {
             console.log(counter)
