@@ -4,10 +4,14 @@ function App() {
   
 
   return (
-    <>
-      <h1>Basic React App</h1>
-      <p>Este é um App básico para iniciar projetos com React!</p>
-    </>
+    <div className="container">
+      <h1>Hello</h1>
+      <form className="form">
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <button type="submit">Login</button>
+      </form>
+    </div>
   )
 }
 
