@@ -3,11 +3,10 @@ import Input from "./Input"
 export default function Login() {
   return (
     <div>
-      <h1>Faça o Login:</h1>
+      <h1>Hello:</h1>
       <form className="form">
-        <Input type="text" placeholder="Username"/>
-        <Input type="password" placeholder="Password" />
-        <button type="submit">Login</button>
+        <Input type="text" placeholder="What's your name?"/>
+        <button type="submit">Submit</button>
       </form>
     </div>
   )
