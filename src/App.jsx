@@ -2,26 +2,22 @@ import { useState } from "react"
 
 function App() {
   
-  let [counter, setCounter] = useState(0)
+  const startTime = new Date().toLocaleTimeString("pt-BR")
+  let [time, setTime] = useState(startTime)
+
+  function timeAdjust() {
+    setInterval( () => {
+      const newTime = new Date().toLocaleTimeString("pt-Br")
+      setTime(newTime)
+    } ,1000)
+  }
+
+  timeAdjust()
 
   return (
     <>
       <div className="container">
-        <h1>SET TIME EXERCISE</h1>
-        <button 
-          onClick={()=> {
-            console.log(counter)
-            const newValue = counter + 1;
-            setCounter(newValue)
-          }}>
-          +
-        </button>
-        <button onClick={ () => {
-          const newValue = counter - 1;
-          setCounter (newValue);
-          } }>
-          -
-        </button>
+        <h1>{time}</h1>
       </div>
     </>
   )
