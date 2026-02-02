@@ -1,5 +1,10 @@
-export default function Input({type,placeholder}) {
+export default function Input({type,placeholder, myFunc, value}) {
   return (
-    <input type={type} placeholder={placeholder} />
+    <input 
+      onChange = {myFunc} 
+      type = {type} 
+      placeholder = {placeholder} 
+      value={value}
+    />
   )
 }
