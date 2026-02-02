@@ -1,10 +1,9 @@
-export default function Input({type,placeholder, myFunc, value}) {
+export default function Input({type,placeholder, funcToCallBack}) {
   return (
     <input 
-      onChange = {myFunc} 
+      onChange = {funcToCallBack} 
       type = {type} 
-      placeholder = {placeholder} 
-      value={value}
+      placeholder = {placeholder}
     />
   )
 }

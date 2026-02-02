@@ -4,8 +4,8 @@ import { useState } from "react"
 export default function Login() {
   
   let [isMouseOver, setIsMouseOver] = useState(false)
-  let [userName, setUserName] = useState('')
-  let [userName2, setUserName2] = useState('')
+  let [fName, setFName] = useState('')
+  let [lName, setLName] = useState('')
   
   function mouseOver() {
     setIsMouseOver(true)
@@ -15,21 +15,25 @@ export default function Login() {
     setIsMouseOver(false)
   }
 
-  function tratarOnChange(evt) {
-    setUserName(evt.target.value)
+  function tratarOnChangeFNameInput(evt) {
+    setFName(evt.target.value)
   }
 
-  function tratarClickDoBotao(evt) {
-    evt.preventDefault()
-    setUserName2(userName)
+  function tratarOnChangeLNameInput(evt) {
+    setLName(evt.target.value)
   }
+
+  // function tratarClickDoBotao(evt) {
+  //   evt.preventDefault()
+  //   setUserName2(userName)
+  // }
 
   return (
     <div>
-      <h1>Hello: {userName2}</h1>
+      <h1>Hello: {fName} {lName}</h1>
       <form className="form">
-        <Input type="text" placeholder="What's your first name?" />
-        <Input type="text" placeholder="What's your last name?" />
+        <Input type="text" placeholder="What's your first name?" funcToCallBack={tratarOnChangeFNameInput}/>
+        <Input type="text" placeholder="What's your last name?" funcToCallBack={tratarOnChangeLNameInput}/>
         {/* <input 
           type="text" 
           placeholder="What's your name?"
@@ -40,7 +44,8 @@ export default function Login() {
           onMouseOver={mouseOver} 
           onMouseLeave={mouseLeave} 
           type="submit"
-          onClick={tratarClickDoBotao} >
+          //onClick={tratarClickDoBotao} 
+          >
             Submit
         </button>
       </form>
