@@ -28,7 +28,8 @@ export default function Login() {
     <div>
       <h1>Hello: {userName2}</h1>
       <form className="form">
-        <Input type="text" placeholder="What's your name?" myFunc={tratarOnChange} value={userName}/>
+        <Input type="text" placeholder="What's your first name?" />
+        <Input type="text" placeholder="What's your last name?" />
         {/* <input 
           type="text" 
           placeholder="What's your name?"
