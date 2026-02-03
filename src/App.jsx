@@ -1,14 +1,27 @@
 import './App.css'
+import { useState } from 'react'
 
 function App() {
-  
+  const [contact, setContact] = useState({
+    fName: "",
+    lName: "",
+    email: ""
+  });
 
   return (
-    <>
-      <h1>Basic React App</h1>
-      <p>Este é um App básico para iniciar projetos com React!</p>
-    </>
-  )
+    <div className="container">
+      <h1>
+        Hello {contact.fName} {contact.lName}
+      </h1>
+      <p>{contact.email}</p>
+      <form>
+        <input name="fName" placeholder="First Name" />
+        <input name="lName" placeholder="Last Name" />
+        <input name="email" placeholder="Email" />
+        <button>Submit</button>
+      </form>
+    </div>
+  );
 }
 
 export default App
