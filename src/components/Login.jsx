@@ -4,8 +4,11 @@ import { useState } from "react"
 export default function Login() {
   
   let [isMouseOver, setIsMouseOver] = useState(false)
-  let [fName, setFName] = useState('')
-  let [lName, setLName] = useState('')
+  let [fullName, setFullName] = useState({
+    fName:'',
+    lName:''
+  })
+  
   
   function mouseOver() {
     setIsMouseOver(true)
@@ -16,11 +19,17 @@ export default function Login() {
   }
 
   function tratarOnChangeFNameInput(evt) {
-    setFName(evt.target.value)
+    setFullName(
+      {...fullName,
+        fName : evt.target.value
+      })
   }
 
   function tratarOnChangeLNameInput(evt) {
-    setLName(evt.target.value)
+    setFullName(
+      {...fullName,
+        lName : evt.target.value
+      })
   }
 
   // function tratarClickDoBotao(evt) {
@@ -30,7 +39,7 @@ export default function Login() {
 
   return (
     <div>
-      <h1>Hello: {fName} {lName}</h1>
+      <h1>Hello: {fullName.fName} {fullName.lName}</h1>
       <form className="form">
         <Input type="text" placeholder="What's your first name?" funcToCallBack={tratarOnChangeFNameInput}/>
         <Input type="text" placeholder="What's your last name?" funcToCallBack={tratarOnChangeLNameInput}/>
