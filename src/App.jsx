@@ -1,4 +1,5 @@
 import './App.css'
+import Form from './components/Form';
 import { useState } from 'react'
 
 function App() {
@@ -8,18 +9,49 @@ function App() {
     email: ""
   });
 
+  function getInput(evt) {
+    const {value:insertedData, name:inputType} = evt.target
+    //console.log(insertedName, inputType)
+    switch (inputType) {
+      case 'fName':
+        setContact (
+          {...contact,
+            fName: insertedData
+          }
+        )
+        console.log(contact)
+        break;
+      
+      case 'lName':
+        setContact (
+          {...contact,
+            lName: insertedData
+          }
+        )
+        break;
+
+      case 'email':
+        setContact (
+          {...contact,
+            email: insertedData
+          }
+        )
+        break;
+    
+      default:
+        break;
+    }
+  }
+
   return (
     <div className="container">
       <h1>
         Hello {contact.fName} {contact.lName}
       </h1>
       <p>{contact.email}</p>
-      <form>
-        <input name="fName" placeholder="First Name" />
-        <input name="lName" placeholder="Last Name" />
-        <input name="email" placeholder="Email" />
-        <button>Submit</button>
-      </form>
+      <Form 
+        tratarInput = {getInput}
+      ></Form>
     </div>
   );
 }
