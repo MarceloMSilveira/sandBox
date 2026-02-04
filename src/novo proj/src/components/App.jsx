@@ -1,8 +1,6 @@
-import './App.css'
+import React from "react";
 
 function App() {
-  
-
   return (
     <div className="container">
       <div className="heading">
@@ -20,7 +18,7 @@ function App() {
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
