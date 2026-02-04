@@ -1,7 +1,11 @@
 import './App.css'
 
+
 function App() {
   
+  
+
+  let theUl = ['fazer 1', 'fazer 2', 'fazer 3', 'fazer 4']
 
   return (
     <div className="container">
@@ -16,7 +20,7 @@ function App() {
       </div>
       <div>
         <ul>
-          <li>A Item</li>
+          {theUl.map(item => <li>{item}</li>)}
         </ul>
       </div>
     </div>
