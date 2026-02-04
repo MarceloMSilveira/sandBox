@@ -11,36 +11,11 @@ function App() {
 
   function getInput(evt) {
     const {value:insertedData, name:inputType} = evt.target
-    //console.log(insertedName, inputType)
-    switch (inputType) {
-      case 'fName':
-        setContact (
+    setContact (
           {...contact,
-            fName: insertedData
+            [inputType]: insertedData
           }
         )
-        console.log(contact)
-        break;
-      
-      case 'lName':
-        setContact (
-          {...contact,
-            lName: insertedData
-          }
-        )
-        break;
-
-      case 'email':
-        setContact (
-          {...contact,
-            email: insertedData
-          }
-        )
-        break;
-    
-      default:
-        break;
-    }
   }
 
   return (
