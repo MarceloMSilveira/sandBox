@@ -1,11 +1,11 @@
+import Input from "./Input"
+import Btn from "./Btn"
 export default function Form({tratarChangeInput, tratarBtnClick}) {
   
   return (
     <div className="form">
-      <input onChange={tratarChangeInput} type="text" />
-      <button onClick={tratarBtnClick}>
-        <span>Add</span>
-      </button>
+      <Input onChangeInput = {tratarChangeInput} />
+      <Btn tratarBtnClick={tratarBtnClick}/>
     </div>
   )
 }
