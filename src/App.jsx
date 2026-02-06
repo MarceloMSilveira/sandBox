@@ -1,6 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import Form from './components/Form'
+import TaskList from './components/TaskList'
 
 function App() {
   
@@ -21,9 +22,7 @@ function App() {
           tratarBtnClick = {btnClick}
       ></Form>
       <div>
-        <ul>
-          {toDoList.map((item, index) => <li key={index}>{item}</li>)}
-        </ul>
+        <TaskList toDoList = {toDoList}/>
       </div>
     </div>
   )
