@@ -1,8 +1,10 @@
-export default function ListItem({item, clickItem}) {
+export default function ListItem({item, clickItem,id}) {
 
   return (
     <li 
-      onClick={clickItem}>{item}
+      onClick={clickItem}
+      id={id}
+    >{item}
     </li>
   )
 }

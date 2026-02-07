@@ -13,7 +13,7 @@ function App() {
     setToDoList([...toDoList, inputContent])
     setInputContent("")
   }
-  const tratarItemListClick = evt => setToDoList(toDoList.filter(item=>item !== evt.target.textContent))
+  const tratarItemListClick = evt => setToDoList(toDoList.filter((item, index)=> index != evt.target.id))
   
 
   
