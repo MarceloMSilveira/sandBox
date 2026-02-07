@@ -1,14 +1,51 @@
-import './App.css'
+import InputArea from "./components/InputArea";
+import ToDoItem from "./components/ToDoItem";
+import { useState } from "react";
 
 function App() {
+  const [inputText, setInputText] = useState("");
+    const [items, setItems] = useState([]);
   
-
-  return (
-    <>
-      <h1>Basic React App</h1>
-      <p>Este é um App básico para iniciar projetos com React!</p>
-    </>
-  )
+    function handleChange(event) {
+      const newValue = event.target.value;
+      setInputText(newValue);
+    }
+  
+    function addItem() {
+      setItems(prevItems => {
+        return [...prevItems, inputText];
+      });
+      setInputText("");
+    }
+  
+    function deleteItem(id) {
+      setItems(prevItems => {
+        return prevItems.filter((item, index) => {
+          return index !== id;
+        });
+      });
+    }
+  
+    return (
+      <div className="container">
+        <div className="heading">
+          <h1>To-Do List</h1>
+        </div>
+        <InputArea handleChange={handleChange} addItem={addItem} inputText={inputText} />
+        <div>
+          <ul>
+            {items.map((todoItem, index) => (
+              <ToDoItem
+                key={index}
+                id={index}
+                text={todoItem}
+                onChecked={deleteItem}
+              />
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
 }
 
 export default App
