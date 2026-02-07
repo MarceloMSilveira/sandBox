@@ -9,7 +9,10 @@ function App() {
   let [toDoList, setToDoList] = useState([])
 
   const tratarInput = evt => setInputContent(evt.target.value)
-  const btnClick = () => setToDoList([...toDoList, inputContent])
+  const btnClick = () => {
+    setToDoList([...toDoList, inputContent])
+    setInputContent("")
+  }
 
   
   return (
@@ -20,6 +23,7 @@ function App() {
       <Form 
           tratarChangeInput = {tratarInput}
           tratarBtnClick = {btnClick}
+          inputContent = {inputContent}
       ></Form>
       <div>
         <TaskList toDoList = {toDoList}/>
