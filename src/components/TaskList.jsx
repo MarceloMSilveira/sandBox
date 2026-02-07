@@ -1,7 +1,8 @@
+import ListItem from "./ListItem"
 export default function TaskList({toDoList}) {
   return (
     <ul>
-      {toDoList.map((item, index) => <li key={index}>{item}</li>)}
+      {toDoList.map((item, index) => <ListItem index={index} item={item} />)}
     </ul>
   )
 }

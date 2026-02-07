@@ -24,7 +24,7 @@ function App() {
           tratarChangeInput = {tratarInput}
           tratarBtnClick = {btnClick}
           inputContent = {inputContent}
-      ></Form>
+      />
       <div>
         <TaskList toDoList = {toDoList}/>
       </div>
