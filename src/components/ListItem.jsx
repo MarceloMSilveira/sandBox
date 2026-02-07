@@ -1,13 +1,8 @@
-import { useState } from 'react'
-import './listItem.css'
-export default function ListItem({item}) {
-
-  let [isDone,setIsDone] = useState(false)
+export default function ListItem({item, clickItem}) {
 
   return (
     <li 
-      style={isDone ? {textDecoration:'line-through'} : {textDecoration:'none'}}
-      onClick={()=>isDone ? setIsDone(false) : setIsDone(true)}>{item}
+      onClick={clickItem}>{item}
     </li>
   )
 }

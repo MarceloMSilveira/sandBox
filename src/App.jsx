@@ -13,6 +13,8 @@ function App() {
     setToDoList([...toDoList, inputContent])
     setInputContent("")
   }
+  const tratarItemListClick = evt => setToDoList(toDoList.filter(item=>item !== evt.target.textContent))
+  
 
   
   return (
@@ -26,7 +28,7 @@ function App() {
           inputContent = {inputContent}
       />
       <div>
-        <TaskList toDoList = {toDoList}/>
+        <TaskList toDoList = {toDoList} clickItem={tratarItemListClick}/>
       </div>
     </div>
   )
